@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg6029">
+  <defs
+     id="defs6023" />
+  <metadata
+     id="metadata6026">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="fill:#718e00;fill-opacity:1"
+     id="layer1">
+    <path
+       style="opacity:1;fill:#718e00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.11947171;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 100.86423,25.486761 -2.714567,7.195426 -7.650178,0.794784 6.004801,4.805391 -1.608169,7.520989 4.593006,-3.019971 -17.673345,35.419026 -24.404195,36.657194 19.020544,0.57722 c -6.891489,19.47208 -18.713582,38.944 -31.658015,58.41608 l 26.559102,0.80615 c -10.629839,19.68716 -26.190281,41.8394 -42.489913,64.36144 l 63.968706,-3.08301 v 41.55043 h 15.875003 v -41.61916 l 63.0871,3.36568 c -14.66489,-20.8198 -28.99044,-41.77569 -38.94594,-64.47926 l 26.70534,-0.73071 C 147.73731,155.14069 135.808,136.34568 126.96496,115.49315 l 18.35082,-0.50229 -24.29464,-36.729542 -17.55087,-35.439698 4.50774,2.60966 -2.03347,-7.417118 5.72161,-5.139221 -7.68222,-0.358635 z"
+       id="path6617" />
+  </g>
+</svg>

@@ -29,34 +29,31 @@
             <ColumnDefinition Width="0.8*"/>
             <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
-        <Border x:Name="CanvasBorder" Grid.Column="0" BorderThickness="2" BorderBrush="BlueViolet" Margin="10" CornerRadius="3" >
-            <Grid>
+        <Border x:Name="CanvasBorder" Grid.Column="0" BorderThickness="2" BorderBrush="BlueViolet" Margin="10" CornerRadius="3" Padding="10" >
+            <Grid Grid.Column="0">
                 <Viewbox>
                     <ItemsControl ItemsSource="{Binding PathList}" Height="{Binding SvgHeight}" Width="{Binding SvgWidth}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                                <Canvas >
-                                <i:Interaction.Triggers>
-                                    <i:EventTrigger EventName="MouseDown" >
-                                        <cmd:EventToCommand Command="{Binding Path= OnMouseDownCommand}" PassEventArgsToCommand="True" />
-                                    </i:EventTrigger>
-                                </i:Interaction.Triggers>
-                            </Canvas>
-                            
+                                <Canvas>
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseDown" >
+                                            <cmd:EventToCommand Command="{Binding Path= OnMouseDownCommand}" PassEventArgsToCommand="True" />
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </Canvas>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
 
                     <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            
-                            <Path Stroke="{Binding Stroke}" 
+                            <DataTemplate>
+                                <Path Stroke="{Binding Stroke}"
                                   StrokeThickness="{Binding StrokeThickness}" 
                                   Fill="{Binding Fill}" 
                                   Data="{Binding Data}" 
                                   Tag="{Binding Tag}"
                                   Cursor="Pen"/>
-                            
-                        </DataTemplate>
+                            </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
                 </Viewbox>

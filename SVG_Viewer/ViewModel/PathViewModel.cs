@@ -24,7 +24,7 @@ namespace SVG_Viewer.ViewModel
                 RaisePropertyChanged("Data");
             }
         }
-        public SolidColorBrush Fill { 
+        public string Fill { 
             get 
             { 
                 return mModel.Fill; 
@@ -36,7 +36,7 @@ namespace SVG_Viewer.ViewModel
                 RaisePropertyChanged("Fill");
             }
         }
-        public SolidColorBrush Stroke 
+        public string Stroke 
         {
             get 
             {
@@ -67,7 +67,7 @@ namespace SVG_Viewer.ViewModel
                 }
             }
         }
-        public double StrokeThickness
+        public string StrokeThickness
         {
             get
             {
@@ -75,7 +75,7 @@ namespace SVG_Viewer.ViewModel
             }
             set
             {
-                if (mModel != null && value >= 0)
+                if (mModel != null)
                 {
                     mModel.StrokeThickness = value;
                     RaisePropertyChanged("StrokeThickness");

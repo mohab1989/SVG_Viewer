@@ -19,7 +19,10 @@ namespace SVG_Viewer.ViewModel
             {
                 // split the item from its value
                 string[] keyValue = item.Split(':');
-                STYLE_INFO.Add(keyValue[0], keyValue[1]);
+                if(keyValue.Count<string>()  > 1)
+                {
+                    STYLE_INFO.Add(keyValue?[0], keyValue[1]);
+                }
             }
         }
 

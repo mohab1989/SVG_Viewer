@@ -2,9 +2,6 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using SVG_Viewer.Model;
 using System;
-using System.Collections;
-using System.Windows;
-using System.Windows.Documents;
 using System.Windows.Media;
 using System.Xml;
 using System.Collections.Generic;
@@ -18,43 +15,42 @@ namespace SVG_Viewer.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private Path SelectedPath;
-        private Color _SelectedColor;
 
-        public double _SvgWidth;
-        public double _SvgHeight;
+        private string svgWidth;
+        private string svgHeight;
 
-        public double SvgWidth
+        public string SvgWidth
         {
-            get{return _SvgWidth;}
+            get{return svgWidth; }
             set
             {
-                _SvgWidth= value;
+                svgWidth = value;
                 RaisePropertyChanged("SvgWidth");
             }
         }
-        public double SvgHeight
+
+        public string SvgHeight
         {
-            get { return _SvgHeight; }
+            get { return svgHeight; }
             set
             {
-                _SvgHeight = value;
+                svgHeight = value;
                 RaisePropertyChanged("SvgHeight");
             }
+
         }
         public Color SelectedColor
         {
-            get { return _SelectedColor; }
+            get { return ColorPickerModel.selectedColor; }
             set
             {
-                _SelectedColor = value;
+                ColorPickerModel.selectedColor = value;
                 RaisePropertyChanged("SelectedColor");
             }
         }
 
         public MainViewModel()
         {
-            PopulateColorList();
-            SelectedColor = Colors.Red;
             AddSvgCommand = new RelayCommand(AddSvgCommandEx);
             OnMouseDownCommand = new RelayCommand<MouseButtonEventArgs>(OnMouseDownCommandEx);
         }
@@ -63,16 +59,18 @@ namespace SVG_Viewer.ViewModel
 
         private void AddSvgCommandEx()
         {
-            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-            openFileDialog.DefaultExt = ".svg";
-            openFileDialog.Filter = "svg files (*.svg)|*.svg";
-            Nullable<bool> result = openFileDialog.ShowDialog();
-            if (result==true)
+            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog
+            {
+                DefaultExt = ".svg",
+                Filter = "svg files (*.svg)|*.svg"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
             {
                 try
                 {
                     string filename = openFileDialog.FileName;
-                    loadSVG(filename);
+                    LoadSVG(filename);
                 }
                 catch (Exception ex)
                 {
@@ -87,143 +85,75 @@ namespace SVG_Viewer.ViewModel
             SelectedPath = args.OriginalSource as Path;
             if (SelectedPath != null)
             {
-                //SelectedColor = ((System.Windows.Media.SolidColorBrush)(SelectedPath.Fill)).Color;
                 PathViewModel path = SelectedPath.DataContext as PathViewModel;
-                path.Fill = ColorToBrush( SelectedColor );
+                path.Fill = SelectedColor.ToString();
             }
         }
 
-        private IList<ColorItem> _ColorList= new ObservableCollection<ColorItem>();
         public IList<ColorItem> ColorList 
         {
-            get { return _ColorList; }
-        }
-        private void PopulateColorList()
-        {
-            ColorList.Add(new ColorItem(Colors.Beige, "Beige"));
-            ColorList.Add(new ColorItem(Colors.Black, "Black"));
-            ColorList.Add(new ColorItem(Colors.Blue, "Blue"));
-            ColorList.Add(new ColorItem(Colors.Pink, "Pink"));
-            ColorList.Add(new ColorItem(Colors.Red, "Red"));
-            ColorList.Add(new ColorItem(Colors.White, "White"));
-            ColorList.Add(new ColorItem(Colors.Yellow, "Yellow"));
+            get { return ColorPickerModel.colorList; }
         }
 
+        public IList<PathViewModel> PathList { get; } = new ObservableCollection<PathViewModel>();
 
-        private IList<PathViewModel> _PathList = new ObservableCollection<PathViewModel>();
-        public IList<PathViewModel> PathList
-        {
-            get
-            {
-                return _PathList;
-            }
-        }
-
-        private void loadSVG(string fileName)
+        private void LoadSVG(string fileName)
         {
             PathList.Clear();
-            XmlDocument SvgDoc = new XmlDocument();
+            var SvgDoc = new XmlDocument();
             SvgDoc.Load(fileName);
-            XmlNamespaceManager xmlnsManager = new XmlNamespaceManager(SvgDoc.NameTable);
+            var xmlnsManager = new XmlNamespaceManager(SvgDoc.NameTable);
             xmlnsManager.AddNamespace("global", SvgDoc.DocumentElement.NamespaceURI);
-            string GXpath = "/global:svg/global:g";
-            XmlNodeList currentNodeList = SvgDoc.SelectNodes(GXpath, xmlnsManager);
-
-            SvgWidth = getDoubleVal(Attribute(SvgDoc.DocumentElement, "width", "1"));
-            SvgHeight = getDoubleVal(Attribute(SvgDoc.DocumentElement, "height", "1")); 
-
-            while (currentNodeList.Count > 0)
+            if(SvgDoc.SelectNodes("/global:svg", xmlnsManager).Count == 0)
             {
-                int TagNum = 0;
-                foreach (XmlNode GNode in currentNodeList)
+                System.Windows.MessageBox.Show("No SVG tag was found");
+                return;
+            }
+
+            SvgWidth = GetAttributeValue(SvgDoc.DocumentElement, "width", "512");
+            SvgHeight = GetAttributeValue(SvgDoc.DocumentElement, "height", "512");
+
+            var pathes = SvgDoc.SelectNodes("//global:path", xmlnsManager);
+
+            int TagNum = 0;
+            foreach (XmlNode pathNode in pathes)
+            {
+                //========================= Load Path Data=========================//
+                string AtrrString = GetAttributeValue(pathNode, "d", null);
+                if (string.IsNullOrEmpty(AtrrString))
                 {
-                    XmlNodeList pathsNodes = GNode.SelectNodes("./global:path", xmlnsManager);
-                    if (pathsNodes.Count > 0)
-                    {
-                        foreach (XmlNode pathNode in pathsNodes)
-                        {
-                            try
-                            {
-                                //========================= Load Path Data=========================//
-                                PathViewModel pathModel = new PathViewModel(new PathModel());
-                                pathModel.Data = Attribute(pathNode, "d");
-
-                                //========================= Load Path Style=========================//
-                                    string AtrrString = null;
-                                    if ((AtrrString = Attribute(pathNode,"style", null)) != null) // inkescape style
-                                    {
-                                        StyleParser StyleParser = new StyleParser(AtrrString);
-                                        pathModel.Fill = ColorToBrush(StyleParser.Color("fill"));
-                                        pathModel.Stroke = ColorToBrush(StyleParser.Color("stroke"));
-                                        pathModel.StrokeThickness = StyleParser.Size("stroke-width");
-                                        pathModel.Tag = TagNum;
-
-                                    }
-                                    else
-                                    {
-                                        pathModel.Fill = ColorToBrush(getcolor(Attribute(pathNode, "fill", "none")));
-                                        pathModel.Stroke = ColorToBrush(getcolor(Attribute(pathNode, "stroke", "none")));
-                                        pathModel.StrokeThickness = getPenSize(Attribute(pathNode, "stroke-width"));
-                                        pathModel.Tag = TagNum;
-                                    }
-
-                                    PathList.Add(pathModel);
-                                    TagNum++;
-                                }
-                                catch (Exception ex)
-                                {
-                                    System.Windows.MessageBox.Show("Error: While Loading SVG. Original error: " + ex.Message);
-                                }                            
-                        }
-                    }
+                    System.Windows.MessageBox.Show("Path node doesnt have a `d` attribute");
                 }
-                GXpath = GXpath + "/global:g";
-                currentNodeList = SvgDoc.SelectNodes(GXpath, xmlnsManager);
+
+                PathModel pathModel = new PathModel
+                {
+                    Data = AtrrString,
+                    Tag = TagNum,
+                };
+                ++TagNum;
+
+                //========================= Load Path Style=========================//
+                var StyleParser = new StyleParser(GetAttributeValue(pathNode, "style"));
+                pathModel.Fill = StyleParser.String("fill","Transparent");
+                pathModel.Stroke = StyleParser.String("stroke", "Black");
+                pathModel.StrokeThickness = StyleParser.String("stroke-width","1");
+                PathList.Add(new PathViewModel(pathModel));
             }
         }
 
-        public static string Attribute(XmlNode node, string Attribute, string defaultVal = "")
+        public static string GetAttributeValue(XmlNode node, string Attribute, string defaultVal = "")
         {
-            if (node.Attributes[Attribute] != null)
-                return node.Attributes[Attribute].Value;
-            else
-                return defaultVal;
-        }
-        private SolidColorBrush ColorToBrush (Color? color)
-        {
-            SolidColorBrush brush;
-            if(color!=null)
+            XmlAttribute attribute;
+            while ((attribute = node.Attributes[Attribute]) == null)
             {
-                return brush= new SolidColorBrush((Color)color);
+                var parentNode = node.ParentNode;
+                if(parentNode == null || parentNode.Attributes == null)
+                {
+                    return defaultVal;
+                }
+                node = parentNode;
             }
-            else
-            {
-                return brush=new SolidColorBrush(Colors.Transparent);
-            }
-        }
-        public static Color? getcolor(string color)
-        {
-            if (color == "none")
-                return null;//Colors.Transparent;
-
-            return (Color)ColorConverter.ConvertFromString(color);
-        }
-        public static double getPenSize(string penSizeString, double defaultVal = 1)
-        {
-            double result;
-            if (!double.TryParse(penSizeString.Replace("px", ""), out result))
-                return defaultVal;
-            else
-                return result;
-        }
-
-        public static double getDoubleVal(string doubleString, double defaultVal = 1)
-        {
-            double result;
-            if (!double.TryParse(doubleString, out result))
-                return defaultVal;
-            else
-                return result;
+            return attribute.Value;
         }
     }
 }

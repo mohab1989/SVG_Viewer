@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" id="svg6791" viewBox="0 0 474.16 527.09" version="1.0">
+ <g id="g6727" transform="matrix(2.2694 0 0 2.3951 1461.9 -1250.3)">
+  <path id="path6599" d="m-487.67 614.31l12.37-2.11-0.69 20.43-16.49 2.11-10.31-14.09 15.12-6.34z" fill-rule="evenodd" stroke="#000" stroke-width="1.0714px" fill="#1a1a1a"/>
+  <path id="path6601" d="m-493.12 634.25l17.39-1.11 1.25-3.34-18.64 0.56v3.89z" fill-rule="evenodd" stroke="#000" stroke-width="1.2803px" fill="#808080"/>
+  <g id="g6603" stroke="#000" transform="matrix(1.0582 0 0 1.0847 45.615 256.16)">
+   <path id="path6605" d="m-482.27 313.35l-3.82 0.59-4.07 81.67-23.96 24.49 6.07 0.58 18.24-20.85-3.01 19.66 5.6 0.42v-20.52l0.5 0.02 18.34 21.08 5.85-1.19s-21.34-21.59-23.78-24.35l4.04-81.6z" fill-rule="evenodd" stroke-width=".94259px" fill="#1a1a1a"/>
+   <path id="path6607" d="m-460.55 310.12a22.624 5.4881 0 1 1 -45.25 0 22.624 5.4881 0 1 1 45.25 0z" transform="matrix(1.002 .095727 0 .82351 -.14181 100.99)" fill="#806600"/>
+   <path id="path6609" d="m-460.55 310.12a22.624 5.4881 0 1 1 -45.25 0 22.624 5.4881 0 1 1 45.25 0z" transform="matrix(1.002 .095727 0 .82351 .75420 98.523)" fill="#806600"/>
+   <rect id="rect6611" height="5.8241" width="9.8562" y="416.19" x="-514.99" fill="#999"/>
+   <rect id="rect6613" height="5.3331" width="9.1411" y="417.78" x="-494.13" stroke-width="1.0431" fill="#999"/>
+   <rect id="rect6615" height="5.4578" width="9.4899" y="418.16" x="-470.9" stroke-width=".91831" fill="#808080"/>
+   <path id="path6617" d="m-489.67 314.49l1.56 2.69 8.74 0.9 2.69-3.14-12.99-0.45z" fill-rule="evenodd" stroke-width="1px"/>
+   <path id="path6619" d="m-487.88 306.65l9.41 1.12-1.57-2.69-5.83-0.67-2.01 2.24z" fill-rule="evenodd" stroke-width="1px"/>
+   <path id="path6621" d="m-481.51 304.83l-0.18-4.82-2.68-0.72-0.42 5.54h3.28z" fill-rule="evenodd" stroke-width="1.0603px" fill="#1a1a1a"/>
+  </g>
+  <path id="path6625" d="m-505.42 700.76l14.39 24.29-14.39 0.77-7.52-22.17 7.52-2.89z" fill-rule="evenodd" stroke="#000" stroke-width="1.0714px" fill="#333"/>
+  <path id="path6627" d="m-584.84 704.25l-14.38 24.28 14.38 0.77 7.52-22.16-7.52-2.89z" fill-rule="evenodd" stroke="#000" stroke-width="1.0714px" fill="#333"/>
+  <path id="path6629" d="m-611.18 655.16l-0.79 44.81 4.02-0.43-0.32-45-2.91 0.62z" fill-rule="evenodd" stroke="#000" stroke-width=".86739px" fill="#1a1a1a"/>
+  <rect id="rect6631" height="5.1956" width="9.0922" stroke="#000" y="697.12" x="-615.67" fill="#999"/>
+  <path id="path6633" d="m-590.51 603.38l-36.38-5.19-5.2 54.56 42.87 2.6 10.4-50.02-11.69-1.95z" fill-rule="evenodd" stroke="#000" stroke-width="1px" fill="#1a1a1a"/>
+  <path id="path6635" d="m-630.43 652.71l-8.53 44 4.03 0.27 7.48-44.37-2.98 0.1z" fill-rule="evenodd" stroke="#000" stroke-width=".86739px" fill="#1a1a1a"/>
+  <path id="path6637" d="m-632.81 649.49c10.15 3.04 23.53 4.75 35.99 3.96-0.21 1.36-0.41 2.73-0.62 4.09-13.45 0.18-26.52-2.71-36.44-4.88 0.35-1.06 0.71-2.11 1.07-3.17z" fill-rule="evenodd" stroke="#000" stroke-width="1.0855px" fill="#b3b3b3"/>
+  <path id="path6639" d="m-486.4 661.34c0 22.67-17.82 47.28-27.19 51.71-17.94 8.47-38.7 7.75-58.95 0.32-14.22-5.22-26.08-29.01-26.08-52.37 0-34.92 28.46-66.97 59.07-66.97s53.15 32.39 53.15 67.31z" stroke="#000" stroke-width="1.0714" fill="#1a1a1a"/>
+  <path id="path6641" d="m-488.9 616.57l14.39-1.14 1.03-3.42-15.42 0.57v3.99z" fill-rule="evenodd" stroke="#000" stroke-width="1.1781px" fill="#808080"/>
+  <path id="path6643" d="m-495.74 366.51a65.298 57.747 0 1 1 -130.59 0 65.298 57.747 0 1 1 130.59 0z" transform="matrix(.78908 -.20973 .20320 .89991 -174.07 216.11)" stroke="#000" stroke-width="1.2349" fill="#ccc"/>
+  <path id="path6645" d="m-521.5 344.74a15.991 15.547 0 1 1 -31.98 0 15.991 15.547 0 1 1 31.98 0z" transform="matrix(.86426 0 0 .97325 -59.372 349.17)"/>
+  <rect id="rect6647" height="5.5735" width="3.1333" stroke="#000" y="606.43" x="-541.44" stroke-width=".89779" fill="#333"/>
+  <rect id="rect6649" height="4.3924" width="2.6394" stroke="#000" y="714.97" x="-546.79" stroke-width=".73150" fill="#333"/>
+  <rect id="rect6651" transform="rotate(90)" height="4.2848" width="2.7056" stroke="#000" y="591.7" x="660.15" stroke-width=".73150" fill="#333"/>
+  <rect id="rect6653" transform="rotate(90)" height="4.2848" width="2.7056" stroke="#000" y="487.05" x="664.2" stroke-width=".73150" fill="#333"/>
+  <rect id="rect6655" transform="matrix(.80011 .59986 -.58079 .81405 0 0)" height="4.3552" width="2.6626" stroke="#000" y="801.51" x="-48.276" stroke-width=".73160" fill="#333"/>
+  <rect id="rect6657" transform="matrix(.80011 .59986 -.58079 .81405 0 0)" height="4.3552" width="2.6626" stroke="#000" y="801.51" x="-48.276" stroke-width=".73160" fill="#333"/>
+  <rect id="rect6659" transform="matrix(-.80011 .59986 .58079 .81405 0 0)" height="4.3552" width="2.6626" stroke="#000" y="151.45" x="827.72" stroke-width=".73160" fill="#333"/>
+  <rect id="rect6661" transform="matrix(-.80011 .59986 .58079 .81405 0 0)" height="4.3552" width="2.6626" stroke="#000" y="254.91" x="818.91" stroke-width=".73160" fill="#333"/>
+  <rect id="rect6663" transform="matrix(.80011 .59986 -.58079 .81405 0 0)" height="4.3552" width="2.6626" stroke="#000" y="907.06" x="-66.67" stroke-width=".73160" fill="#333"/>
+  <path id="path6665" d="m-545.08 603.13l0.42-18.06-17-0.81-0.42 5.66 11.05-0.54-0.43 15.1 6.38-1.35z" fill-rule="evenodd" stroke="#000" stroke-width="1.0885px" fill="#1a1a1a"/>
+  <path id="path6667" d="m-534.8 602.76l1.2-17.14 17.28-1.74-0.4 6.21-11.65-0.74 0.4 14.16-6.83-0.75z" fill-rule="evenodd" stroke="#000" stroke-width="1.0158px" fill="#1a1a1a"/>
+  <path id="path6669" d="m-552.87 606.52c2.96 0 10.53-3.04 10.53-3.04l0.33-3.37-11.52 1.01 0.66 5.4z" fill-rule="evenodd" stroke="#000" stroke-width="1.0714px" fill="#999"/>
+  <path id="path6671" d="m-536.09 598.42l-0.66 5.4 11.19 2.02-0.66-5.4-9.87-2.02z" fill-rule="evenodd" stroke="#000" stroke-width="1.0714px" fill="#999"/>
+  <path id="path6673" d="m-517.21 572.46l-2.94 40.13c10.93 5.35 22.27 7.74 34.46 4.22l4.62-43.08c-10.79-3.38-18.63-4.65-36.14-1.27z" fill-rule="evenodd" stroke="#000" stroke-width="1.3546px" fill="#1a1a1a"/>
+  <path id="path6675" d="m-596.82 605.08c-8.98-3.01-20.82-4.72-31.85-3.93 0.18-1.35 0.36-2.71 0.55-4.06 11.9-0.18 23.46 2.69 32.25 4.85-0.32 1.04-0.63 2.09-0.95 3.14z" fill-rule="evenodd" stroke="#000" stroke-width="1.0171px" fill="#b3b3b3"/>
+  <path id="path6677" d="m-557.94 573.78l-3.2 39.14c-12.03 1.91-23.14 4.62-36.09 0.82l1.83-37.51c13.86-6.11 26.8-4.89 37.46-2.45z" fill-rule="evenodd" stroke="#000" stroke-width="1.3877px" fill="#1a1a1a"/>
+  <path id="path6679" d="m-597.27 578.65c13.83-5.13 28.15-6.62 40-2.02 0.16-0.95 0.33-1.89 0.49-2.84-10.86-5.13-27.65-3.38-40 1.62-0.16 1.08-0.33 2.16-0.49 3.24z" fill-rule="evenodd" stroke="#000" stroke-width="1.4381px" fill="#999"/>
+  <path id="path6681" d="m-519.03 576.24c12.73-5.31 28.65-4.75 39.56 0-2.12-1.4 0.3-1.96 0.45-2.94-10-5.31-28.19-5.59-39.55-0.42-0.15 1.12-0.3 2.24-0.46 3.36z" fill-rule="evenodd" stroke="#000" stroke-width="1.4041px" fill="#999"/>
+  <path id="path6683" d="m-559.25 609.83c-13.43 5.14-27.34 6.63-38.85 2.03-0.16 0.95-0.32 1.89-0.48 2.84 10.55 5.14 26.86 3.39 38.85-1.62 0.16-1.09 0.32-2.17 0.48-3.25z" fill-rule="evenodd" stroke="#000" stroke-width="1.419px" fill="#999"/>
+  <path id="path6685" d="m-521.73 611.93c12.88 5.31 26.22 6.85 37.26 2.1 0.15 0.98 0.31 1.96 0.46 2.93-10.12 5.32-25.76 3.5-37.26-1.67-0.15-1.12-0.3-2.24-0.46-3.36z" fill-rule="evenodd" stroke="#000" stroke-width="1.4123px" fill="#999"/>
+  <rect id="rect6687" height="6.7513" width="19.145" stroke="#000" y="722.59" x="-601.42" stroke-width="1.1697" fill="#999"/>
+  <rect id="rect6689" height="7.0448" width="21.304" stroke="#000" y="723.17" x="-508.72" stroke-width="1.0714" fill="#999"/>
+  <g id="g6691" stroke="#000" transform="matrix(1 0 0 1.0877 38.976 272.75)">
+   <g id="g6693">
+    <path id="path6695" d="m-443.57 249.97a35.07 13.963 0 1 1 -70.14 0 35.07 13.963 0 1 1 70.14 0z" transform="matrix(1 -0.566 0 1 -31.173 -266.37)" fill="#806600"/>
+    <path id="path6697" d="m-507.61 256.51l-4.03 0.92-4.29 128.97-25.26 38.66 6.4 0.92 19.23-32.93-3.17 31.05 5.9 0.66v-32.41l0.53 0.04 19.33 33.29 6.17-1.89s-22.49-34.08-25.07-38.45l4.26-128.83z" fill-rule="evenodd" stroke-width="1.2161px" fill="#1a1a1a"/>
+    <path id="path6699" d="m-515.81 261.79l13.1-6.8-3.67-2.75-7.6 3.9-1.83 5.65z" fill-rule="evenodd" stroke-width="1px"/>
+   </g>
+   <rect id="rect6701" height="6.3177" width="10.43" y="421.21" x="-542.21" stroke-width="1.0714" fill="#999"/>
+   <rect id="rect6703" height="5.785" width="9.6729" y="422.93" x="-520.14" stroke-width="1.1175" fill="#999"/>
+   <rect id="rect6705" height="5.9203" width="10.042" y="423.35" x="-495.55" stroke-width=".98386" fill="#808080"/>
+  </g>
+  <g id="g6707" stroke="#000" transform="matrix(-1 0 0 1.1007 -1118.4 269.12)">
+   <g id="g6709">
+    <path id="path6711" d="m-443.57 249.97a35.07 13.963 0 1 1 -70.14 0 35.07 13.963 0 1 1 70.14 0z" transform="matrix(1 -0.566 0 1 -31.173 -266.37)" fill="#806600"/>
+    <path id="path6713" d="m-507.61 256.51l-4.03 0.92-4.29 128.97-25.26 38.66 6.4 0.92 19.23-32.93-3.17 31.05 5.9 0.66v-32.41l0.53 0.04 19.33 33.29 6.17-1.89s-22.49-34.08-25.07-38.45l4.26-128.83z" fill-rule="evenodd" stroke-width="1.2161px" fill="#1a1a1a"/>
+    <path id="path6715" d="m-515.81 261.79l13.1-6.8-3.67-2.75-7.6 3.9-1.83 5.65z" fill-rule="evenodd" stroke-width="1px"/>
+   </g>
+   <rect id="rect6717" height="6.3177" width="10.43" y="421.21" x="-542.21" stroke-width="1.0714" fill="#999"/>
+   <rect id="rect6719" height="5.785" width="9.6729" y="422.93" x="-520.14" stroke-width="1.1175" fill="#999"/>
+   <rect id="rect6721" height="5.9203" width="10.042" y="423.35" x="-495.55" stroke-width=".98386" fill="#808080"/>
+  </g>
+  <rect id="rect6723" height="6.0649" width="9.3121" stroke="#000" y="694.41" x="-641.76" stroke-width=".78015" fill="#999"/>
+ </g>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+    <dc:publisher>
+     <cc:Agent rdf:about="http://openclipart.org/">
+      <dc:title>Openclipart</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+</svg>
